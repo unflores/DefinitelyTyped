@@ -849,6 +849,7 @@ user.validate();
 
 user.update( { bNumber : 2 }, { where : { id : 1 } } );
 user.update( { username : 'userman' }, { silent : true } );
+user.update( { username : 'userman' }, { where : { username : null } } );
 user.update( { username : 'yolo' }, { logging : function() { } } );
 user.update( { username : 'bar' }, { where : { username : 'foo' }, transaction : t } ).then( ( p ) => p );
 user.updateAttributes( { a : 3 } ).then( ( p ) => p );
