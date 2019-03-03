@@ -3200,7 +3200,7 @@ declare namespace sequelize {
      * A hash of attributes to describe your search, accepting any field names. See `WhereOptions` for details.
      */
     interface AnyWhereOptions {
-        [field: string]: WhereOptions<any>[] | Object;
+        [field: string]: WhereOptions<any>[] | Object | null;
     }
 
     /**
